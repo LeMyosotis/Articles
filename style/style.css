@@ -156,6 +156,11 @@ body {
         margin-top: 50px;
         padding-top: 70px;
     }
+    .page.error {
+        margin: 40px auto 0 auto;
+        padding-top: 70px;
+        height: 90%;
+    }
         .page.top .head {
             height: 200px;
             width: 95%;
@@ -276,6 +281,11 @@ body {
                     color: var(--main-color);
                     margin-bottom: 15px;
                 }
+                .article-title.error {
+                    font-size: 150px;
+                    font-weight: 800;
+                    text-align: center;
+                }
                 .article-text {
                     font: 16px "Alice", sans-serif;
                     color: var(--text-color);
@@ -299,6 +309,23 @@ body {
                         .bold {
                             font-weight: bold;
                         }
+                .button-error {
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: auto;
+                    padding: 12px 15px;
+                    border-radius: 20px;
+                    font: 16px "Alice", sans-serif;
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                    background: var(--third-color);
+                    transition: 0.2s;
+                }
+                .button-error:hover {
+                    background: var(--main-color);
+                }
                 
                 .complement {
                     height: auto;
@@ -320,6 +347,10 @@ body {
                         color: var(--text-color);
                         font-weight: 400;
                         text-align: justify;
+                        overflow-wrap: break-word;
+                    }
+                    .complement-link {
+                        overflow-wrap: break-word;
                     }
                 .image-box {
                     display: flex;
@@ -368,6 +399,10 @@ body {
         }
         .page.last {
             border-bottom: none;
+        }
+        .page.error {
+            height: 100vh;
+            margin: 0 auto 0 auto;
         }
             .page.top .header-rightleft {
                 display: none;
