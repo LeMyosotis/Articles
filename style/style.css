@@ -321,6 +321,9 @@ body {
                         font-weight: 400;
                         text-align: justify;
                     }
+                    .complement-link {
+                        overflow-wrap: break-word;
+                    }
                 .image-box {
                     display: flex;
                     flex-direction: column;
