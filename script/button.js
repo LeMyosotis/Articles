@@ -1,4 +1,4 @@
-const button = document.querySelector(".button")
+const button = document.querySelector(".color-picker-button")
 const colorPickerBox = document.querySelector(".color-picker-box")
 
 
