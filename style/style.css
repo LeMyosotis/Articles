@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb {
                     transition: border-radius 0.2s ease-out
                 }
                 .home-button:hover .house .roof {
-                    border-radius: 5px;
+                    border-radius: 5px 3px;
                 }
                 .house .walls {
                     position: absolute;
@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
                     transition: border-radius 0.2s ease-out
                 }
                 .home-button:hover .house .walls {
-                    border-radius: 7px;
+                    border-radius: 8px;
                 }
 
 
