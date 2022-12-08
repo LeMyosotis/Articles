@@ -50,6 +50,12 @@ body::-webkit-scrollbar-thumb {
     .top-page {
         height: 1px;
     }
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
     .menu-center {
         position: fixed;
         top: 0;
@@ -72,6 +78,7 @@ body::-webkit-scrollbar-thumb {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
             }
             .top-button {
                 display: flex;
@@ -253,6 +260,7 @@ body::-webkit-scrollbar-thumb {
         background-position: center;
         border-radius: 2px;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        cursor: default;
     }
     .page.top {
         margin-top: 99px;
@@ -588,6 +596,9 @@ body::-webkit-scrollbar-thumb {
             background: none;
             box-shadow: none;
             border-bottom: 5px solid var(--background-color);
+        }
+        .page.top {
+            padding: 90px 0 0 0;
         }
         .page.content {
             padding: 0;
