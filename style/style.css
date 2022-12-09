@@ -225,6 +225,7 @@ body::-webkit-scrollbar-thumb {
 
         .color-picker-box {
             position: fixed;
+            z-index: 3;
             top: 100px;
             left: 25px;
             width: 250px;
@@ -234,11 +235,11 @@ body::-webkit-scrollbar-thumb {
             box-shadow: 0 0 3px var(--fourth-color);
             transition: transform 0.3s ease-out;
         }
-        .color-picker-box.open {
+        .color-selector.open .color-picker-box {
             transform: translateX(0%);
         }
             .color-picker-box .color-picker-name {
-                font: 15px "Alice", sans-serif;
+                font: 15px "Alice", calibri;
                 color: var(--second-color);
                 text-align: center;
                 margin: 0 auto 20px auto;
@@ -250,6 +251,18 @@ body::-webkit-scrollbar-thumb {
                 width: 190px;
                 margin: 10px auto 0 auto;
             }
+        .color-selector-out {
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transform: translateX(-110%);
+        }
+        .color-selector.open .color-selector-out {
+            transform: translateX(0%);
+        }
 
     .page {
         width: 800px;
@@ -265,6 +278,9 @@ body::-webkit-scrollbar-thumb {
     .page.top {
         margin-top: 99px;
         padding-top: 70px;
+    }
+    .page.last {
+        margin-bottom: 20px;
     }
     .page.error {
         margin: 40px auto 0 auto;
@@ -295,14 +311,14 @@ body::-webkit-scrollbar-thumb {
                     margin-top: 25px;
                     display: flex;
                     align-items: center;
-                    font: 20px "Yeseva One", sans-serif;
+                    font: 20px "Yeseva One", calibri;
                     color: var(--second-color);
                     text-align: center;
                     margin: 0 auto 0 auto;
                 }
                 .page.accueil .card-description {
                     margin-top: 15px;
-                    font: 12px "Alice", sans-serif;
+                    font: 12px "Alice", calibri;
                     color: var(--second-color);
                     text-align: center;
                 }
@@ -346,7 +362,7 @@ body::-webkit-scrollbar-thumb {
                     width: 100%;
                 }
                     .page.top .newspaper-title {
-                        font: 66px "Yeseva One", sans-serif;
+                        font: 66px "Yeseva One", calibri;
                         color: var(--main-color);
                         text-align: center;
                         margin: 0 auto 0 auto;
@@ -398,7 +414,7 @@ body::-webkit-scrollbar-thumb {
                     }
                 
                 .page.content .newspaper-title {
-                    font: 66px "Yeseva One", sans-serif;
+                    font: 66px "Yeseva One", calibri;
                     color: var(--main-color);
                     text-align: center;
                     margin: 20px;
@@ -429,7 +445,8 @@ body::-webkit-scrollbar-thumb {
                 width: 100%;
             }
                 .article-title {
-                    font: 35px "Yeseva One", sans-serif;
+                    font-size: 35px;
+                    font-family:"Yeseva One", calibri;
                     color: var(--main-color);
                     margin-bottom: 15px;
                 }
@@ -439,7 +456,7 @@ body::-webkit-scrollbar-thumb {
                     text-align: center;
                 }
                 .article-text {
-                    font: 16px "Alice", sans-serif;
+                    font: 16px "Alice", calibri;
                     color: var(--text-color);
                     font-weight: 400;
                     line-height: 23px;
@@ -470,7 +487,7 @@ body::-webkit-scrollbar-thumb {
                     width: auto;
                     padding: 12px 15px;
                     border-radius: 20px;
-                    font: 16px "Alice", sans-serif;
+                    font: 16px "Alice", calibri;
                     color: rgb(255, 255, 255);
                     text-align: center;
                     background: var(--third-color);
@@ -491,12 +508,12 @@ body::-webkit-scrollbar-thumb {
                     margin-top: 0;
                 }
                     .complement-title {
-                        font: 20px "Yeseva One", sans-serif;
+                        font: 20px "Yeseva One", calibri;
                         color: var(--main-color);
                         margin-bottom: 10px;
                     }
                     .complement-text {
-                        font: 12px Arial, sans-serif;
+                        font: 12px Arial, calibri;
                         color: var(--text-color);
                         font-weight: 400;
                         text-align: justify;
@@ -523,7 +540,7 @@ body::-webkit-scrollbar-thumb {
                     .article-paratext {
                         width: 95%;
                         margin-top: 5px;
-                        font: italic 11px "Alice", sans-serif;
+                        font: italic 11px "Alice", calibri;
                         color: var(--text-color);
                         font-weight: 400;
                         line-height: 23px;
@@ -595,7 +612,7 @@ body::-webkit-scrollbar-thumb {
             margin: 20px 0;
             background: none;
             box-shadow: none;
-            border-bottom: 5px solid var(--background-color);
+            border-bottom: 3px solid var(--background-color);
         }
         .page.top {
             padding: 90px 0 0 0;
@@ -678,19 +695,19 @@ body::-webkit-scrollbar-thumb {
                     font-size: 30px;
                 }
                 .article-text {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 .article-text.litle {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 .complement-title {
                     font-size: 18px
                 }
                 .complement-text {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 .article-paratext {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
 }
 
@@ -714,19 +731,25 @@ body::-webkit-scrollbar-thumb {
                 font-size: 23px;
             }
             .article-text {
-                font-size: 10px;
+                font-size: 12px;
             }
             .article-text.litle {
-                font-size: 10px;
+                font-size: 12px;
             }
             .complement-title {
                 font-size: 15px
             }
             .complement-text {
-                font-size: 10px;
+                font-size: 12px;
             }
             .article-paratext {
-                font-size: 10px;
+                font-size: 12px;
+            }
+            .article-title.error {
+                font-size: 100px;
+            }
+            .button-error {
+                width: 80%;
             }
 }
 @media (max-width: 220px){

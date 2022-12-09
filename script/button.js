@@ -1,8 +1,14 @@
 const button = document.querySelector(".color-picker-button")
-const colorPickerBox = document.querySelector(".color-picker-box")
+const out = document.querySelector(".color-selector-out")
+const colorPicker = document.querySelector(".color-selector")
 
 
 button.addEventListener("click", e => {
     button.classList.toggle("active");
-    colorPickerBox.classList.toggle("open");
+    colorPicker.classList.toggle("open");
+});
+
+out.addEventListener("click", e => {
+    button.classList.remove("active");
+    colorPicker.classList.remove("open");
 });
