@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }   
+            }
                 .home-button .house{
                     height: 40px;
                     width: 40px;
@@ -264,6 +264,39 @@ body::-webkit-scrollbar-thumb {
             transform: translateX(0%);
         }
 
+    .sommaire{
+      position:fixed;
+      top: 25px;
+      right: 25px;
+      width: calc((100% - 800px)/2 - 50px);
+      max-width: 300px;
+      background: var(--second-color);
+      padding: 0px 10px 10px 10px;
+      border-radius: 15px;
+    }
+    .sommaire-title{
+      font-size:30px;
+      border-bottom: 1px solid var(--background-color);
+      padding: 7px 0px;
+      text-align: center;
+      color: var(--text-color);
+    }
+    .sommaire-list{
+      list-style-type: none;
+      text-align: center;
+    }
+        li{
+          padding: 6px 0px;
+        }
+    .sommaire-link{
+      font-size:21px;
+      text-decoration: none;
+      color: var(--text-color);
+    }
+    .sommaire-link:hover{
+      color: var(--main-color);
+    }
+
     .page {
         width: 800px;
         height: 1150px;
@@ -277,9 +310,9 @@ body::-webkit-scrollbar-thumb {
     }
     .page.top {
         margin-top: 99px;
-        padding-top: 70px;
+        padding-top: 40px;
     }
-    .page.last {
+    .page.large {
         margin-bottom: 20px;
     }
     .page.error {
@@ -357,7 +390,7 @@ body::-webkit-scrollbar-thumb {
                             width: auto;
                             height: 140px;
                         }
-                
+
                 .page.top .header-center {
                     width: 100%;
                 }
@@ -385,7 +418,7 @@ body::-webkit-scrollbar-thumb {
                 border-radius: 1px;
                 margin-top: 10px;
             }
-    
+
     .page.content {
         margin-top: 15px;
         padding-top: 40px;
@@ -412,7 +445,7 @@ body::-webkit-scrollbar-thumb {
                         width: auto;
                         height: 90px;
                     }
-                
+
                 .page.content .newspaper-title {
                     font: 66px "Yeseva One", calibri;
                     color: var(--main-color);
@@ -432,11 +465,11 @@ body::-webkit-scrollbar-thumb {
             }
 
         .body {
-            margin: 20px 40px 0 40px;
+            margin: 20px 30px 0 30px;
             display: flex;
         }
             .column {
-                width: 350px;
+                width: 360px;
             }
             .column.two {
                 margin-left: 30px;
@@ -448,20 +481,25 @@ body::-webkit-scrollbar-thumb {
                     font-size: 35px;
                     font-family:"Yeseva One", calibri;
                     color: var(--main-color);
-                    margin-bottom: 15px;
+                    margin-bottom: 10px;
+                    line-height: 150%;
                 }
                 .article-title.error {
                     font-size: 150px;
                     font-weight: 800;
                     text-align: center;
                 }
+                .large-title {
+                    text-align: center;
+                }
                 .article-text {
                     font: 16px "Alice", calibri;
                     color: var(--text-color);
                     font-weight: 400;
-                    line-height: 23px;
-                    text-indent: 50px;
+                    line-height: 25px;
+                    text-indent: 40px;
                     text-align: justify;
+                    letter-spacing: -0.34px;
                 }
                 .article-text.litle {
                     font-size: 14px;
@@ -496,11 +534,11 @@ body::-webkit-scrollbar-thumb {
                 .button-error:hover {
                     background: var(--main-color);
                 }
-                
+
                 .complement {
                     height: auto;
                     width: 100%;
-                    margin: 10px auto 20px auto;
+                    margin: 10px auto 10px auto;
                     padding: 10px;
                     background: var(--second-color);
                 }
@@ -514,6 +552,7 @@ body::-webkit-scrollbar-thumb {
                     }
                     .complement-text {
                         font: 12px Arial, calibri;
+                        letter-spacing: 0px;
                         color: var(--text-color);
                         font-weight: 400;
                         text-align: justify;
@@ -527,7 +566,7 @@ body::-webkit-scrollbar-thumb {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: 20px auto 10px auto;
+                    margin: 10px auto 10px auto;
                     word-break: keep-all;
                 }
                 .image-box.top {
@@ -537,13 +576,18 @@ body::-webkit-scrollbar-thumb {
                         height: auto;
                         width: 95%;
                     }
+                    .little-image {
+                        height: auto;
+                        width: 55%;
+                        padding-bottom : 10px;
+                    }
                     .article-paratext {
                         width: 95%;
                         margin-top: 5px;
                         font: italic 11px "Alice", calibri;
                         color: var(--text-color);
                         font-weight: 400;
-                        line-height: 23px;
+                        line-height: 175%;
                         text-align: center;
                     }
 
@@ -620,7 +664,7 @@ body::-webkit-scrollbar-thumb {
         .page.content {
             padding: 0;
         }
-        .page.last {
+        .page.large {
             border-bottom: none;
         }
         .page.error {
@@ -647,7 +691,7 @@ body::-webkit-scrollbar-thumb {
                 margin: 0;
             }
                 .article-title {
-                    margin-top: 50px;
+                    margin-top: 40px;
                 }
                 .article-title.fisrt {
                     margin-top: 20px;
@@ -720,7 +764,7 @@ body::-webkit-scrollbar-thumb {
     }
         .page.top .head-top {
             height: auto;
-        }   
+        }
             .page.top .newspaper-title {
                 font-size: 35px;
             }
