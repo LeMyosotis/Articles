@@ -331,7 +331,7 @@ body::-webkit-scrollbar-thumb {
                 height: 175px;
                 width: 200px;
                 margin: 20px;
-                padding: 15px 10px;
+                padding: 10px;
                 border-radius: 5px;
                 background: var(--main-color);
                 transition: transform 0.2s ease-out;
