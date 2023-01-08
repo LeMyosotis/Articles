@@ -702,6 +702,9 @@ body::-webkit-scrollbar-thumb {
                     .image {
                         width: 70%;
                     }
+    .sommaire {
+    display:none;
+  }
 }
 
 @media (max-width: 700px){
