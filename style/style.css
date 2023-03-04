@@ -37,6 +37,9 @@ html {
     --background-color : rgb(120, 100, 80);
 }
 
+u {
+  text-decoration: underline;
+}
 
 body {
     background-color: var(--background-color);
@@ -288,6 +291,9 @@ body::-webkit-scrollbar-thumb {
         li{
           padding: 6px 0px;
         }
+        auteur{
+          padding: 6px 0px;
+        }
     .sommaire-link{
       font-size:21px;
       text-decoration: none;
@@ -331,7 +337,7 @@ body::-webkit-scrollbar-thumb {
                 height: 175px;
                 width: 200px;
                 margin: 20px;
-                padding: 10px;
+                padding: 10px 10px;
                 border-radius: 5px;
                 background: var(--main-color);
                 transition: transform 0.2s ease-out;
@@ -702,7 +708,7 @@ body::-webkit-scrollbar-thumb {
                     .image {
                         width: 70%;
                     }
-    .sommaire {
+  .sommaire {
     display:none;
   }
 }
